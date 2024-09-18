@@ -1,0 +1,11 @@
+export declare const BS = 8;
+export declare const TAB = 9;
+export declare const NL = 10;
+export declare const CR = 13;
+export declare const SP = 32;
+export declare const isalnum: (c: number) => boolean;
+export declare const iscntrl: (c: number) => boolean;
+export declare const isUtf8ContinuationByte: (c: number) => boolean;
+export declare const tolower: (c: number) => number;
+export declare const toupper: (c: number) => number;
+export declare const stringToUtf8Bytes: (str: string) => number[];
