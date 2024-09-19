@@ -13,10 +13,6 @@
     "build": "tsc && webpack",
     "check": "tsc"
   },
-  "files": [
-    "index.js.map",
-    "emscripten-pty.js"
-  ],
   "dependencies": {
     "@xterm/xterm": "^5.5.0"
   },
