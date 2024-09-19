@@ -172,9 +172,9 @@ export class Slave {
   }
 }
 
-export const openpty = (): { master: Master; slave: Slave } => {
+export function openpty(): { master: Master; slave: Slave } {
   const ldisc = new LineDiscipline();
   const slave = new Slave(ldisc);
   const master = new Master(ldisc, slave);
-  return { master, slave };
-};
+  return {master, slave};
+}

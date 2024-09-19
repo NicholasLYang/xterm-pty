@@ -137,11 +137,11 @@ class Slave {
     }
 }
 exports.Slave = Slave;
-const openpty = () => {
+function openpty() {
     const ldisc = new lineDiscipline_1.LineDiscipline();
     const slave = new Slave(ldisc);
     const master = new Master(ldisc, slave);
     return { master, slave };
-};
+}
 exports.openpty = openpty;
 //# sourceMappingURL=pty.js.map

@@ -48,7 +48,7 @@ export declare class Slave {
     ioctl(req: "TCSETS", arg: TermiosConfig): void;
     ioctl(req: "TIOCGWINSZ"): [number, number];
 }
-export declare const openpty: () => {
+export declare function openpty(): {
     master: Master;
     slave: Slave;
 };
