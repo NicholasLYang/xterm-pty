@@ -31,7 +31,7 @@ export type Signal = "SIGINT" | "SIGQUIT" | "SIGTSTP" | "SIGWINCH";
 
 const bufferLimit = 4096;
 
-class Master implements ITerminalAddon {
+export class Master implements ITerminalAddon {
   private disposables: IDisposable[] = [];
 
   private _onWrite = new EventEmitter<[Uint8Array, () => void]>();
@@ -172,7 +172,7 @@ export class Slave {
   }
 }
 
-export const openpty = () => {
+export const openpty = (): { master: Master; slave: Slave } => {
   const ldisc = new LineDiscipline();
   const slave = new Slave(ldisc);
   const master = new Master(ldisc, slave);

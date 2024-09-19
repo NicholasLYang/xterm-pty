@@ -2,7 +2,7 @@ import { Terminal, ITerminalAddon } from "@xterm/xterm";
 import { LineDiscipline } from "./lineDiscipline";
 import { Termios, TermiosConfig } from "./termios";
 export type Signal = "SIGINT" | "SIGQUIT" | "SIGTSTP" | "SIGWINCH";
-declare class Master implements ITerminalAddon {
+export declare class Master implements ITerminalAddon {
     private ldisc;
     private slave;
     private disposables;
@@ -52,4 +52,3 @@ export declare const openpty: () => {
     master: Master;
     slave: Slave;
 };
-export {};

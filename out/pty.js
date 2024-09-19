@@ -22,7 +22,7 @@
 //     xterm.write(`Hi, ${ slave.read().trim() }!\n`);
 //   });
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.openpty = exports.Slave = void 0;
+exports.openpty = exports.Slave = exports.Master = void 0;
 const eventEmitter_1 = require("./eventEmitter");
 const lineDiscipline_1 = require("./lineDiscipline");
 const termios_1 = require("./termios");
@@ -68,6 +68,7 @@ class Master {
         this.disposables.length = 0;
     }
 }
+exports.Master = Master;
 class Slave {
     constructor(ldisc) {
         this.ldisc = ldisc;
